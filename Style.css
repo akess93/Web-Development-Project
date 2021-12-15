@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');*
+
+/*universal selector*/
+
+*{
+	box-sizing:border box;
+	margin: 0;
+	line-height: 30px
+	padding: 0;
+}
+
+
+/* allt inom body*/
+
+body {
+	height: 100%;
+	background-image:linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(200, 211, 248, 1), rgba(27, 77, 255, 1));
+	font-family: "Montserrat", sans-serif;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+address {
+	font-style: normal;
+}
+
+/*denna del stylar top navigationen på hemsidan*/
+
+.nav-container{
+	background: #fffffa;
+	box-shadow: 0px 8px 24px rgba(0,0,0,0.1);
+	height: 72px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+
+.logo {
+	width: 80px;
+	height: 50px;
+	padding-left: 10px;
+	cursor: pointer; 
+}
+
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 72px;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+}
+
+
+
+.nav__links li{
+	list-style: none;
+	margin-right: 100px;
+	
+}
+
+.nav__links li a {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+
+.nav__links li a {
+	color: rgba(0,0,0,0.80);
+	font-size: 14px;
+	transition: all 0.3s ease 0s;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+.nav__links li a:hover{
+	transition: all 0.3s ease 0s;
+	color: #1B4DFF;
+	font-weight: bold;
+}
+/* Stylar active class som gör att den aktiva länken är tydligt utmärkt vid interaktion*/
+
+.active {
+	color: #1B4DFF;
+	font-weight: bold;
+	padding: 5px 5px 5px 5px;
+	border-radius: 10px;
+}
+
+.nav__links li a.active{
+	transition: all 0.3s ease 0s;
+	color: #1B4DFF;
+	font-weight: bold;
+	list-style: underline;
+}
+
+.nav__links a.icon {
+	display: none;
+}
+
+
+/*header display*/
+
+.header-container{
+	padding-left: 100px;
+	background-image: url("images/hero-image.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	height: calc(100vh - 72px);
+	display: flex;
+	align-items: center;
+	
+}
+
+
+
+header {
+	display: flex;
+	flex-direction: row;
+}
+
+header h1 {
+	font-weight: 900;
+	font-size: 64 px; 
+	line-height: 75px;
+	color: #021718;
+	margin-bottom: 24px;
+}
+
+header p {
+	font-size: 24px;
+	line-height: 42px;
+	widht: 418px;
+	color: #021718; 
+	margin-bottom:  48px;
+}
+
+.hero-content a {
+	color: #FFE601;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	background: #1B4DFF;
+	box-shadow: -2px 7px 23px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	padding: 14px;
+	margin-bottom: 48px;
+	
+}
+
+.hero-content a:hover{
+	border: 2px solid;
+	border-color: yellow;
+	
+}
+
+
+/*Stylar hitta hit knappen till höger i top navigation*/
+
+.hitta {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+.hitta i{
+	transition: all 0.3s ease 0s;
+}
+
+
+.hitta i:hover{
+	transition: all 0.3s ease 0s;
+	color: yellow;
+	cursor: pointer;
+}
+
+.hitta i{
+	padding: 9px 9px;
+	background-color: rgba(158, 225, 236, 0.3);
+	border: 2px solid;
+	border-color:FFE601;
+	border-radius: 50px;
+	box-shadow: 5px 5px 15px grey;
+	cursor: pointer;
+}
+
+.hitta p {
+	color: rgba(0,0,0,0.80);
+	padding-left: 5px;
+}
+
+/*Style the section and cards for the how it works section*/
+
+.how-it-works-container {
+	width: 100;
+	height: 614px;
+	text-align: center;
+	
+}
+
+.how-it-works-container h3, img {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.how-it-works-container p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.how-it-works-container h4 {
+	margin-bottom: 20px;
+}
+
+
+.how-it-works-container p, a {
+	text-align: center;
+}
+
+.how-it-works-container a {
+	color: #4d4ae8;
+	text-decoration: none;
+}
+
+
+.how-it-works-container h1 {
+	margin-top: 30px;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+.card {
+	width: 291px;
+	height: 245px;
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 1px 4px 8px rgba(0, 75, 117, 0.3);
+	align-self: normal;
+}
+
+.card img {
+	width: 76px;
+	height: 76px;
+}
+
+.truckIcon {
+	width: 80px;
+}
+
+
+/*About us section*/
+
+.aboutus-container {
+	width: 100;
+	padding-top:80px;
+	padding-bottom:80px;
+}
+
+
+.wrapper-aboutus {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-right: 100px;
+	padding-left: 100px;
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	text-align: center;
+	padding: 40px;
+}
+
+.text-container p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+
+.butikbild {
+	height: auto;
+	box-shadow: 1px 4px 8px rgba(0, 75, 117, 0.3);
+	border-radius: 60px;
+	width: 500px;
+}
+
+
+/*Styling butik information sektionen*/
+
+
+.butik-wrapper {
+	width: 100;
+	padding-top:80px;
+	padding-bottom:80px;
+}
+
+
+.butik-container {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+	padding-right: 100px;
+	padding-left: 100px;
+}
+
+.text-container-store {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	text-align: center;
+	padding: 40px;
+	line-height: 30px;
+}
+
+
+.text-container-store img {
+	box-shadow: 1px 4px 8px rgba(0, 75, 117, 0.3);
+	border-radius: 60px;
+	width: 500px;
+}
+
+.text-container img {
+	box-shadow: 1px 4px 8px rgba(0, 75, 117, 0.3);
+	border-radius: 60px;
+	width: 500px;
+}
+
+.image_container {
+	position: relative;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+}
+
+.centered {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* translate metod som flyttar elementet från ens nuvarande position enligt angivna värden för x-axel och y-axel*/
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+}
+
+/*Vanliga frågor sektionen*/
+
+.faq_container {
+	display: flex;
+	align-items: center;
+	padding: 100px;
+	text-align: left;
+	border-radius: 10px;
+}
+
+.faq_container h1 {
+	text-align: center;
+}
+
+.question_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: left;
+	background: rgba(255, 255, 255, 0.35);
+	box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
+	padding: 40px;
+	border-radius: 10px;
+}
+
+.content_question{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-evenly;
+}
+
+/*CSS för kollaps funktionen i vanliga frågor*/
+
+.collapsible {
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  background: rgba(27, 77, 255, 0.23);
+}
+
+.active, .collapsible:hover {
+	background: rgba(250, 246, 208, 0.8);
+	color: #000;
+}
+
+.content {
+  padding: 10px 18px;
+  display: none;
+  overflow: hidden;
+  background: rgba(250, 246, 208, 0.8);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dashed;
+}
+
+#last_collaps {
+	border-radius: 0px 0px 10px 10px;
+}
+
+#first_collaps {
+	border-radius: 10px 10px 0px 0px;
+}
+
+#last_collaps:active {
+	border-radius: 0px;
+}
+
+/*Styling for form sektionen*/
+
+.contact-page {
+	width: 100%;
+	height: 714px;
+	text-align: left-side;
+}
+
+.contact-page h1 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.contact-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content:center;
+	justify-content: space-evenly;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+input {
+	width: 294px;
+	height: 40px;
+	background: white;
+	box-shadow: 1px 4px 8px rgba(0, 75, 117, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 60px;
+
+}
+
+input[type=text],
+input[type=email],
+input[type=tel]{
+	display: inline-block;
+	margin: 5px 0 15px 0;
+}
+
+input[type=text]:active,
+input[type=email]:active,
+input[type=tel]:active{
+	border: 2px solid yellow;
+}
+
+
+::-webkit-input-placeholder {
+	padding-left: 15px;
+}
+
+input[type=submit] {
+	padding: 8px;
+	width: 94px;
+	height: 40px;
+	background: #1B4DFF;
+	box-shadow: -2px 7px 23px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	color: rgba(255, 230, 1, 1);
+	font-style: normal;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	border: 2px solid yellow;
+}
+
+textarea {
+	width: 596px;
+	height: 247px;
+	background: white;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	box-sizing: border-box;
+	box-shadow: 1px 4px 8px rgba(0, 75, 117, 0.3);
+	border-radius: 0px 60px 60px 60px;
+}
+
+fieldset {
+	border: none;
+}
+
+.contact-content{
+	widht: 360px;
+	height: 426px;
+	background-blend-mode: overlay;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(255, 255, 255, 0.5);
+	background-color: white;
+	padding: 30px;
+	box-shadow: 1px 4px 8px rgba(0, 75, 117, 0.3);
+	border-radius: 0px 60px 60px 60px;
+	align-items: center;
+}
+
+.contact-content a {
+	text-decoration: none;
+}
+
+/*stylar footer på hemsidan*/
+
+.footer-container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+	width:100%;
+	background: rgba(250, 246, 208, 0.8);
+	border: 1px dashed #1B4DFF;
+	
+}
+
+.footer-columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: none;
+}
+
+
+.footer-columns > div a:hover {
+	color: blue;
+}
+
+.footer-columns > div a, address {
+	color: #000;
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.footer-social > div {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.footer-content-contact > div {
+	display: flex;
+	flex-direction:row;
+	align-items: center;
+}
+
+.footer-content-contact > div a, address {
+	padding-left: 10px;
+	text-decoration: none;
+	
+}
+
+
+
